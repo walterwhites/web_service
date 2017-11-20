@@ -1,0 +1,18 @@
+# On active la réecriture d'url
+RewriteEngine On
+
+# On définit le répertoire de réecriture d'url
+RewriteBase /f2i/
+
+# si la ressource ne notre reqûete http n'existe pas
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# alors je recupère tout ce qu'il y a après /f2i/
+# je stocke le résultat dans la query string "url"
+RewriteRule (^.*$) server.php?url=$1 [L,QSA]
+
+# regex () = groupe
+# ^ = doit commencer par quelque chose
+# . = n'importe quel caractère
+# * = à l'infini
+# $ = ce terminant absolument par un caractère
