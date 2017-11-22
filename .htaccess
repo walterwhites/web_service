@@ -2,7 +2,7 @@
 RewriteEngine On
 
 # On définit le répertoire de réecriture d'url
-RewriteBase /f2i/
+RewriteBase /web_service/
 
 # si la ressource ne notre reqûete http n'existe pas
 RewriteCond %{REQUEST_FILENAME} !-f

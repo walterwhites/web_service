@@ -1,66 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
-
-    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>WebService</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+  </head>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body>
-<h1>Hello, world!</h1>
+  <body>
 
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">WebService</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </header>
 
-<main class="container">
+    <!-- Begin page content -->
+    <main role="main" class="container">
 
-    <div class="form-group" >
+      <!-- webservice:get:start -->
         <form action="./" method="GET">
-            <button class="form-control btn-success" type="submit">GET (Read)</button>
+          <button class="form-control" type="submit"> GET (Read)</button>
         </form>
-    </div>
+      <!-- webservice:get:stop -->
 
-
-    <div class="form-group" >
+      <!-- webservice:post:start -->
         <form action="./" method="POST">
-            <input class="form-control" name="value">
-            <button class="form-control btn-primary" type="submit">CREATE</button>
+          <input class="form-control" name="value"> 
+          <button class="form-control" type="submit"> POST (Create)</button>
         </form>
-    </div>
+      <!-- webservice:post:stop -->
 
-    <div class="form-group">
+      <!-- webservice:put:start -->
         <form action="./" method="PUT">
-            <input class="form-control" name="id">
-            <input class="form-control" name="value">
-            <button class="form-control btn-info" type="submit">Put</button>
+          <input class="form-control" name="id"> 
+          <input class="form-control" name="value"> 
+          <button class="form-control" type="submit"> PUT (Update)</button>
         </form>
-    </div>
+      <!-- webservice:put:stop -->
 
-
-    <div class="form-group">
+      <!-- webservice:delete:start -->
         <form action="./" method="DELETE">
-            <input class="form-control" name="id">
-            <button class="form-control btn-danger" type="submit">DELETE</button>
+          <input class="form-control" name="id" > 
+          <button class="form-control" type="submit"> DELETE (Delete)</button>
         </form>
-    </div>
+      <!-- webservice:delete:stop -->
 
-    <pre id="return"></pre>
-</main>
+      <!-- response:start -->
+      <pre id="return"></pre>
+      <!-- response:stop -->
+
+    </main>
+
+    <footer class="footer">
+      <div class="container text-center">
+        <span class="text-muted"></span>
+      </div>
+    </footer>
 
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
-<script src="js/webservice.js"></script>
-</body>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/webservice.js"></script>
+  </body>
 </html>
